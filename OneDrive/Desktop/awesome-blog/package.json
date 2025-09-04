@@ -7,8 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages -r https://github.com/AKSHAYKRISHNA012/blog-app1.git"
+  "predeploy": "npm run build",
+  "postbuild": "copy dist\\index.html dist\\404.html",
+  "deploy": "gh-pages -d dist -b gh-pages -r https://github.com/AKSHAYKRISHNA012/blog-app1.git"
   },
   "dependencies": {
     "react-dom": "^19.1.1",
