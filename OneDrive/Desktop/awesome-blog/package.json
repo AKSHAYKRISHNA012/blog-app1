@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "git subtree push --prefix dist blog-app1 gh-pages || echo 'If first time, creating gh-pages branch' && git push blog-app1 `git subtree split --prefix dist main`:gh-pages --force"
+    "deploy": "gh-pages -d dist -b gh-pages -r https://github.com/AKSHAYKRISHNA012/blog-app1.git"
   },
   "dependencies": {
     "react-dom": "^19.1.1",
@@ -18,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "gh-pages": "^6.1.1"
   }
 }
