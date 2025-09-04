@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "git subtree push --prefix dist blog-app1 gh-pages || echo 'If first time, creating gh-pages branch' && git push blog-app1 `git subtree split --prefix dist main`:gh-pages --force"
   },
   "dependencies": {
     "react-dom": "^19.1.1",
